@@ -98,3 +98,21 @@ export const workExperience = [
     thumbnail: "/exp4.svg",
   },
 ];
+
+export const socialMedia = [
+  {
+    id: 1,
+    img: "/git.svg",
+    link: "https://github.com/bakate",
+  },
+  {
+    id: 2,
+    img: "/twit.svg",
+    link: "https://x.com/bakateba",
+  },
+  {
+    id: 3,
+    img: "/link.svg",
+    link: "https://www.linkedin.com/in/bakate-ba/",
+  },
+];
