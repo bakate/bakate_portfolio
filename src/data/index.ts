@@ -67,3 +67,34 @@ export const projects = [
     link: "https://e-commerce-cms-ebon.vercel.app/",
   },
 ];
+
+export const workExperience = [
+  {
+    id: 1,
+    title: "Web Development Projects (Learning)",
+    desc: "Built diverse web apps (Foodies, Pexels-like, Fairmont Hotels) to hone development skills using Node.js, React & more. See projects & GitHub.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Web Development Trainer (Freelance)",
+    desc: "Trained students aspiring to be web developers in Git, Github, and JavaScript.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Front-End Developer (Freelance)",
+    desc: "Redesigned a website for an electronics component distributor using Next.js and styled-components.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Full Stack Engineer",
+    desc: "Led transformative Full Stack projects & migrated backoffice to TypeScript, enhancing code quality for leading enterprises.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+];
