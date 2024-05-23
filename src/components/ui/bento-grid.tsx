@@ -41,7 +41,6 @@ export const BentoGridItem = ({
   img,
   imgClassName,
   titleClassName,
-  spareImg,
 }: {
   className?: string;
   id: number;
@@ -50,7 +49,6 @@ export const BentoGridItem = ({
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
-  spareImg?: string;
 }) => {
   const stackList = [
     "Angular",
@@ -63,6 +61,10 @@ export const BentoGridItem = ({
     "Playwright",
     "Prisma",
     "tailwindcss",
+    "jest",
+    "React-Query",
+    "React-Testing-Library",
+    "Drizzle ORM",
   ];
 
   const [copied, setCopied] = useState(false);

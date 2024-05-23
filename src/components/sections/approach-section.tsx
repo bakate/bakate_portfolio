@@ -6,7 +6,7 @@ import React from "react";
 
 const ApproachSection = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full lg:py-20 py-10">
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
