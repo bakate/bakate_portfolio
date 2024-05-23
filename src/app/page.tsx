@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import ApproachSection from "@/components/sections/approach-section";
 import ExperienceSection from "@/components/sections/experience-section";
 import GridSection from "@/components/sections/grid-section";
 import RecentProjects from "@/components/sections/recent-projects";
@@ -14,6 +15,7 @@ export default function Home() {
         <GridSection />
         <RecentProjects />
         <ExperienceSection />
+        <ApproachSection />
       </div>
     </main>
   );
