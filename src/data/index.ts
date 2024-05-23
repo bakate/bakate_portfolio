@@ -40,3 +40,30 @@ export const gridItems = [
     img: "",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "AfrikaZon",
+    des: "An e-commerce platform where we can buy African clothes. ",
+    img: "/p1.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://www.afrikazon.com/",
+  },
+  {
+    id: 2,
+    title: "Samoura store",
+    des: "An e-commerce platform where we can buy clothes.",
+    img: "/p2.webp",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://e-commerce-cms-ney3.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Content Management System",
+    des: "A plateform where you can create, edit and delete content.",
+    img: "/p3.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    link: "https://e-commerce-cms-ebon.vercel.app/",
+  },
+];
