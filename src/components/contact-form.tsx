@@ -27,8 +27,8 @@ const ContactForm = () => {
   const form = useForm({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
-      username: "bakate",
-      email: "email@email.com",
+      username: "",
+      email: "",
     },
 
     mode: "onBlur",
