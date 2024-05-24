@@ -2,13 +2,39 @@
 import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "@/components/magic-button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { socialMedia } from "@/data";
+import { useDialog } from "@/hooks/use-dialog";
 import Image from "next/image";
+import ContactForm from "../contact-form";
 
 const FooterSection = () => {
+  const { isOpen, setOpen } = useDialog();
   return (
     <footer className="w-full lg:pt-20 pb-5" id="contact">
       {/* background grid */}
+
+      <Dialog open={isOpen} onOpenChange={setOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="flex items-center">
+              Contact Me
+              <FaLocationArrow className="ml-2 size-4" />
+            </DialogTitle>
+            <DialogDescription>
+              I am always open to new opportunities and would love to hear from
+              you!
+            </DialogDescription>
+          </DialogHeader>
+          <ContactForm />
+        </DialogContent>
+      </Dialog>
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <Image
           src="/footer-grid.svg"
@@ -28,16 +54,13 @@ const FooterSection = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:bakateba@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-            handleClick={() => {
-              // TODO open a modal with a form
-            }}
-          />
-        </a>
+
+        <MagicButton
+          title="Let's get in touch"
+          icon={<FaLocationArrow />}
+          position="right"
+          handleClick={() => setOpen(true)}
+        />
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center gap-y-3">
         <p className="md:text-base text-sm md:font-normal font-light">
