@@ -6,7 +6,7 @@ import React from "react";
 
 const ApproachSection = () => {
   return (
-    <section className="w-full lg:py-20 py-10">
+    <section className="w-full lg:py-20 py-10" id="approach">
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
