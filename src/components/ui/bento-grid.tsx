@@ -148,7 +148,7 @@ export const BentoGridItem = ({
                 <span
                   key={i}
                   className="p-2 text-xs lg:text-base opacity-50
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center dark:bg-[#10132E]"
                 >
                   {item}
                 </span>
@@ -171,7 +171,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="dark:!bg-[#161A31]"
               />
             </div>
           )}
