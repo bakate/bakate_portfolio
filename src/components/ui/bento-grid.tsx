@@ -8,6 +8,7 @@ import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
 
 import animationData from "@/data/confetti.json";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import MagicButton from "../magic-button";
 import { BackgroundGradientAnimation } from "./gradient-background";
@@ -50,20 +51,22 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
 }) => {
+  const { theme } = useTheme();
   const stackList = [
     "Angular",
     "Typescript",
     "NodeJS",
     "Next.js",
     "SQL",
-    "NoSQL",
+    "MongoDB",
     "Cypress",
     "Playwright",
     "Prisma",
-    "tailwindcss",
+    "Tailwindcss",
     "jest",
+    "Hono",
     "React-Query",
-    "React-Testing-Library",
+    "Testing-Library",
     "Drizzle ORM",
   ];
 
@@ -94,9 +97,12 @@ export const BentoGridItem = ({
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
+        background:
+          theme === "dark" ? "rgb(4,7,29)" : "rgba(255, 255, 255, 0.125)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          theme === "dark"
+            ? "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)"
+            : "linear-gradient(90deg, rgba(255, 255, 255, 0.125) 0%, rgba(255, 255, 255, 0.125) 100%)",
       }}
     >
       {/* add img divs */}
@@ -106,7 +112,7 @@ export const BentoGridItem = ({
             <Image
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center")}
+              className={cn(imgClassName, "object-cover object-center inset-0")}
               fill
               sizes="300"
             />
@@ -126,7 +132,7 @@ export const BentoGridItem = ({
           )}
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight line-clamp-1 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight line-clamp-1 text-lg dark:text-[#C1C2D3] z-10">
             {description}
           </div>
 
@@ -141,14 +147,14 @@ export const BentoGridItem = ({
 
           {/* Tech stack list div */}
           {id === 3 && (
-            <div className="grid grid-cols-3 gap-1 lg:gap-3 w-fit">
+            <div className="grid grid-cols-3 gap-1 lg:gap-3 w-fit pb-4">
               {/* tech stack lists */}
 
               {stackList.map((item, i) => (
                 <span
                   key={i}
-                  className="p-2 text-xs lg:text-base opacity-50
-                    lg:opacity-100 rounded-lg text-center dark:bg-[#10132E]"
+                  className="p-2 text-xs lg:text-base opacity-50 flex items-center
+                    lg:opacity-100 rounded-lg justify-center dark:bg-[#10132E] bg-[#F5F5F5]"
                 >
                   {item}
                 </span>

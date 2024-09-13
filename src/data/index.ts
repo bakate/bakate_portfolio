@@ -11,7 +11,7 @@ export const gridItems = [
     title: "I prioritize client collaboration, fostering open communication",
     description: "",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-start",
+    titleClassName: "justify-start text-white",
     img: "/b1.svg",
   },
   {
@@ -36,12 +36,21 @@ export const gridItems = [
     title: "Do you want to start a project together?",
     description: "",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    titleClassName:
+      "justify-center md:max-w-full max-w-60 text-center text-white",
     img: "",
   },
 ];
 
 export const projects = [
+  {
+    id: 0,
+    title: "Code Haven",
+    des: "A learning platform for future developers",
+    img: "/p0.webp",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg"],
+    link: "https://staging.codehaven.eu/",
+  },
   {
     id: 1,
     title: "AfrikaZon",
